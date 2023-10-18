@@ -207,6 +207,7 @@
     - put()의 parameter는 어떠한 타입도 받아들일 수 있다
     1. "Any" 클래스 
         - 모든 클래스의 super-class로서, 임의의 객체를 담을 수 있는 클래스 구현할 수 있음
+        - 임의의 객체를 담는 Box 클래스 구현
         ```kt
         class Box{
             var content: Any? = null
@@ -229,11 +230,12 @@
             var b2: Box = Box()
             b2.put(3)
 
-            println(b1.retrieve())
-            println(b2.retrieve())
+            println(b1.retrieve()) // 출력 : apple
+            println(b2.retrieve()) // 출력 : 3
 
+            // b1에 서로 다른 클래스의 객체가 들어가게 된 것에 주목!
             b1.put(5)
-            println(b1.retrieve())
+            println(b1.retrieve()) // 출력 : 5
         }
         ```
     1. `Template`
@@ -241,6 +243,8 @@
             - 생성 후에는 클래스 자체에는 변화 없음
         - <> 안의 문자는 일관성 있게만 써주면 됨
             - 꼭 T로 쓸 필요없음
+        - 특정 클래스의 객체 담기 위한 Box 클래스 구현
+            - Any 클래스를 사용하는 것은 어떤 클래스 객체가 들어갔는지 알기 어려움
         ```kt
         class Box<T>{
             var content: T? = null
