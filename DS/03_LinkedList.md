@@ -564,7 +564,7 @@ fun main(){
     list.append(4)
     list.append(5)
     println(list)                    // 출력 : 1 -> 2 -> 3 -> 4 -> 5
-    println(list.getMiddle()?.vlaue) // 출력 : 3
+    println(list.getMiddle()?.value) // 출력 : 3
 }
 ```
 
