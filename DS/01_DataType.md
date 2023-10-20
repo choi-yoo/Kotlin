@@ -22,6 +22,15 @@
                 var arr2: Array<Int> = arrayOf(100, 90, 80)
             }
             ```
+        1. ArrayList
+            - `arrayListOf()`
+                - 가변 크기의 배열인 ArrayList를 생성하는 Kotlin에서 제공하는 함수
+            ```kt
+            val numbers = arrayListOf(1, 2, 3, 4, 5)
+
+            numbers.add(6) // ArrayList에 6을 추가
+            numbers.remove(3) // ArrayList에서 3을 제거
+            ```
 
 - 변수 선언
     ```kt
